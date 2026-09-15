@@ -10,7 +10,7 @@ layout: default
     <tbody>
       <tr><th>Operator</th><td>{{ page.operator }}</td></tr>
       <tr><th>UKGC licence</th><td><a href="{{ page.licence_url }}" rel="noopener" target="_blank">Account {{ page.licence_number }}</a> (check the public register)</td></tr>
-      <tr><th>Withdrawal time (tested)</th><td>{{ page.withdrawal_time }}</td></tr>
+      <tr><th>Withdrawal time (as stated by operator)</th><td>{{ page.withdrawal_time }}</td></tr>
       <tr><th>Payment methods</th><td>{{ page.payment_methods }}</td></tr>
       <tr><th>Minimum deposit</th><td>{{ page.min_deposit }}</td></tr>
       <tr><th>Our rating</th><td><strong>{{ page.rating }}</strong> / 10</td></tr>
@@ -28,5 +28,5 @@ layout: default
 
   {{ content }}
 
-  <p class="tested">Tested by {{ site.author_name }} with a real account and a real deposit. Ratings are based on our own experience and published operator terms; they may change. <a href="{{ '/affiliate-disclosure/' | relative_url }}">How we test and how we make money</a>.</p>
+  <p class="tested">This review is based on {{ page.operator }}'s published terms and its UK Gambling Commission licence record, not on a personal account. Terms change; always check the operator's own site before depositing. <a href="{{ '/affiliate-disclosure/' | relative_url }}">How we build reviews and how we make money</a>.</p>
 </article>
