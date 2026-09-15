@@ -1,0 +1,39 @@
+# ── Change these 6 lines, nothing else is required ──
+title: "SpinLedger UK"
+tagline: "Independent UK online casino reviews"
+description: "Independent reviews of UKGC-licensed online casinos: withdrawal times, payment methods, bonus terms and slot stake limits explained."
+url: "https://spinledgeruk-cloud.github.io"
+baseurl: ""                              # keep empty for USERNAME.github.io; "/repo-name" for project pages
+author_name: "Val L."
+contact_email: "contact@example.com"
+# ────────────────────────────────────────────────────
+
+lang: en-GB
+timezone: Europe/London
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+collections:
+  reviews:
+    output: true
+    permalink: /reviews/:name/
+  guides:
+    output: true
+    permalink: /guides/:name/
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: "default" }
+  - scope: { path: "", type: "reviews" }
+    values: { layout: "review" }
+  - scope: { path: "", type: "guides" }
+    values: { layout: "article" }
+
+exclude:
+  - README-deploiement.md
+  - Gemfile
+  - Gemfile.lock

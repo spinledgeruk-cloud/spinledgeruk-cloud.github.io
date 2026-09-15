@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="review">
+  <p class="eyebrow">Casino review · Updated {{ page.updated | default: page.date | date: "%-d %B %Y" }}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="lede">{{ page.description }}</p>
+
+  <table class="facts">
+    <tbody>
+      <tr><th>Operator</th><td>{{ page.operator }}</td></tr>
+      <tr><th>UKGC licence</th><td><a href="{{ page.licence_url }}" rel="noopener" target="_blank">Account {{ page.licence_number }}</a> (check the public register)</td></tr>
+      <tr><th>Withdrawal time (tested)</th><td>{{ page.withdrawal_time }}</td></tr>
+      <tr><th>Payment methods</th><td>{{ page.payment_methods }}</td></tr>
+      <tr><th>Minimum deposit</th><td>{{ page.min_deposit }}</td></tr>
+      <tr><th>Our rating</th><td><strong>{{ page.rating }}</strong> / 10</td></tr>
+    </tbody>
+  </table>
+
+  {% if page.bonus %}
+  <div class="bonus-box">
+    <h2>Welcome offer</h2>
+    <p>{{ page.bonus }}</p>
+    <p class="terms"><strong>Significant terms:</strong> {{ page.bonus_terms }}</p>
+    <p class="terms">18+. New customers only. Full T&amp;Cs apply. BeGambleAware.org.</p>
+  </div>
+  {% endif %}
+
+  {{ content }}
+
+  <p class="tested">Tested by {{ site.author_name }} with a real account and a real deposit. Ratings are based on our own experience and published operator terms; they may change. <a href="{{ '/affiliate-disclosure/' | relative_url }}">How we test and how we make money</a>.</p>
+</article>

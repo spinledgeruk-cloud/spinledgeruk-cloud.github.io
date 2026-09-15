@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" href="{{ '/feed.xml' | relative_url }}">
+</head>
+<body>
+  <div class="age-bar" role="note">
+    <strong>18+</strong> This site is for adults in Great Britain only. Gambling can be addictive, please play responsibly.
+    <a href="https://www.begambleaware.org" rel="noopener" target="_blank">BeGambleAware.org</a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav aria-label="Main">
+      <a href="{{ '/reviews/' | relative_url }}">Casino reviews</a>
+      <a href="{{ '/guides/' | relative_url }}">Guides</a>
+      <a href="{{ '/responsible-gambling/' | relative_url }}">Responsible gambling</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="rg-block">
+      <p><strong>Play responsibly.</strong> Gambling should be fun, not a way to make money. Set deposit limits, never chase losses, and take breaks.
+      If gambling is affecting you or someone you know, free confidential help is available 24/7:</p>
+      <ul>
+        <li><a href="https://www.begambleaware.org" rel="noopener" target="_blank">BeGambleAware</a> · National Gambling Helpline 0808 8020 133</li>
+        <li><a href="https://www.gamcare.org.uk" rel="noopener" target="_blank">GamCare</a> · live chat and support</li>
+        <li><a href="https://www.gamstop.co.uk" rel="noopener" target="_blank">GAMSTOP</a> · free self-exclusion from all UK-licensed sites</li>
+      </ul>
+    </div>
+    <p class="disclosure">{{ site.title }} is an independent comparison site. We may receive a commission if you open an account through our links, at no cost to you. This never influences our ratings. <a href="{{ '/affiliate-disclosure/' | relative_url }}">How we make money</a>.
+    We only feature operators licensed by the <a href="https://www.gamblingcommission.gov.uk/public-register/business" rel="noopener" target="_blank">UK Gambling Commission</a>.</p>
+    <p class="legal">© {{ site.time | date: "%Y" }} {{ site.title }} · <a href="{{ '/privacy/' | relative_url }}">Privacy</a> · <a href="{{ '/contact/' | relative_url }}">Contact</a> · 18+ · <a href="https://www.gamblingcommission.gov.uk" rel="noopener" target="_blank">gamblingcommission.gov.uk</a></p>
+  </footer>
+</body>
+</html>
